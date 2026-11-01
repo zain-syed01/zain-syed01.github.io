@@ -168,17 +168,6 @@ a {
   max-width: 42rem;
 }
 
-.hero-portrait {
-  /* Source is 200x200 — keep CSS size near native for a sharp look */
-  width: 120px;
-  height: 120px;
-  margin: 0 0 1.35rem;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center top;
-  box-shadow: var(--shadow);
-}
-
 .hero-name {
   margin: 0;
   font-family: var(--font-display);
@@ -247,16 +236,17 @@ a {
   padding: 5.5rem 0;
 }
 
-.section-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  gap: clamp(1.5rem, 4vw, 3.5rem);
-  align-items: start;
-}
-
 .section-intro {
   max-width: 38rem;
   margin-bottom: 2.5rem;
+}
+
+.about .section-intro {
+  margin-bottom: 1.5rem;
+}
+
+.about .detail-list {
+  max-width: 46rem;
 }
 
 .section-intro h2,
@@ -475,7 +465,6 @@ a {
 }
 
 @media (max-width: 900px) {
-  .section-grid,
   .project-body,
   .skills-grid {
     grid-template-columns: 1fr;
@@ -484,11 +473,6 @@ a {
   .hero {
     min-height: auto;
     padding-top: 2.5rem;
-  }
-
-  .hero-portrait {
-    width: 104px;
-    height: 104px;
   }
 
   .project-links {
